@@ -1,23 +1,11 @@
-# Hello world javascript action
-
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
+# Akto Github Action
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@v1.1
-with:
-  who-to-greet: 'Mona the Octocat'
+- uses: oren-akto/hello-world-javascript-action@v1.1
+    with:
+      AKTO_DASHBOARD_URL: ${{secrets.AKTO_DASHBOARD_URL}}
+      AKTO_ACCESS_TOKEN: ${{secrets.AKTO_ACCESS_TOKEN}}
+      AKTO_TEST_CONFIGURATION: ${{secrets.AKTO_TEST_CONFIGURATION}}
 ```
