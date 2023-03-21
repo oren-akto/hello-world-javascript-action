@@ -1,13 +1,12 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Akto CI/CD'
+description: 'Run akto in ci/cd'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  AKTO_DASHBOARD_URL:  
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  AKTO_ACCESS_TOKEN:  
+    required: true
+  AKTO_TEST_CONFIGURATION:  
+    required: true
 runs:
   using: 'node16'
   main: 'index.js'

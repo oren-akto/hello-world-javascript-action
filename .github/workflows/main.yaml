@@ -1,15 +1,13 @@
-on: [push]
+on: 
+  workflow_dispatch:
 
 jobs:
-  hello_world_job:
+  akto_cicd_test:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Test akto ci/cd
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: oren-akto/hello-world-javascript-action@v1.1
+      - uses: oren-akto/hello-world-javascript-action@v1.1
         with:
-          who-to-greet: 'Oren Akto'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          AKTO_DASHBOARD_URL: ${{secrets.AKTO_DASHBOARD_URL}}
+          AKTO_ACCESS_TOKEN: ${{secrets.AKTO_ACCESS_TOKEN}}
+          AKTO_TEST_CONFIGURATION: ${{secrets.AKTO_TEST_CONFIGURATION}}
