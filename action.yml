@@ -1,6 +1,6 @@
 name: 'Akto CI/CD'
 description: 'Run akto in ci/cd'
-# inputs:
+# nputs:
   # AKTO_DASHBOARD_URL:  
   #   required: true
   # AKTO_ACCESS_TOKEN:  
