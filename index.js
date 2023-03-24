@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const axios = require("axios")
+const github = require('@actions/github');
 
 async function run() {
   // try {
@@ -17,6 +18,9 @@ async function run() {
   // } catch (error) {
   //   core.setFailed(error.message);
   // }
+  console.log(JSON.stringify(github, undefined, 2))
+  console.log(JSON.stringify(github.context, undefined, 2))
+  console.log(JSON.stringify(github.context.payload, undefined, 2))
   console.log(process.env.GITHUB_ACTION)
   console.log(process.env.GITHUB_SHA)
 }
