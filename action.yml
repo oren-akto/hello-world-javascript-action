@@ -21,7 +21,7 @@ runs:
     - "node"
     - "/usr/app/build/apps/index.js"
     - "cli"
-    - "extract"
+    - "extract --PROJECT_DIR=/github/workspace"
     - "--AKTO_SYNC=true"
     - "--PROJECT_DIR=/github/workspace"
     - "--AKTO_DASHBOARD_URL=http://a8461c33bea9c479196f00b34509ebcf-9285dcb52d810f62.elb.ap-south-1.amazonaws.com:8080"
