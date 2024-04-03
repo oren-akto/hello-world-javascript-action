@@ -18,7 +18,6 @@ runs:
   #   - "ls /usr/app"
   entrypoint: "node"
   args:
-    - "node"
     - "/usr/app/build/apps/index.js"
     - "cli"
     - "extract"
