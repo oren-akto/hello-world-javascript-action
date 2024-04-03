@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'docker://orenakto/akto-utils:latest'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ws
