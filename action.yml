@@ -16,3 +16,4 @@ runs:
   args:
     - "-c"
     - "ls"
+    - "/usr/app"
