@@ -12,7 +12,10 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://orenakto/akto-utils:latest'
-  entrypoint: "/bin/sh"
-  args:
-    - "-c"
-    - "ls /usr/app"
+  # entrypoint: "/bin/sh"
+  # args:
+  #   - "-c"
+  #   - "ls /usr/app"
+  entrypoint: "node"
+  args: 
+    - "-v"
