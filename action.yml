@@ -17,7 +17,14 @@ runs:
   #   - "-c"
   #   - "ls /usr/app"
   entrypoint: "node"
-  args: 
+  args:
+    - "node"
     - "/usr/app/build/apps/index.js"
     - "cli"
     - "extract"
+    - "--AKTO_SYNC=true"
+    - "--PROJECT_DIR=/github/workspace"
+    - "--AKTO_DASHBOARD_URL=http://a8461c33bea9c479196f00b34509ebcf-9285dcb52d810f62.elb.ap-south-1.amazonaws.com:8080"
+    - "--AKTO_API_KEY=MrhwsiZSbSjeOBYjOQkyBdDAeEm7LfzXvCoexjOn"
+    - "--API_COLLECTION_NAME=juice_shop_demo"
+
