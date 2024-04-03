@@ -18,5 +18,5 @@ runs:
   #   - "ls /usr/app"
   entrypoint: "node"
   args: 
-    - "/usr/app/build/index.js"
+    - "/usr/app/build/apps/index.js"
     - "ws"
