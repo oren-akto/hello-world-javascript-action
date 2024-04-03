@@ -19,4 +19,5 @@ runs:
   entrypoint: "node"
   args: 
     - "/usr/app/build/apps/index.js"
-    - "ws"
+    - "cli"
+    - "extract"
