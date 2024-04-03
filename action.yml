@@ -15,5 +15,4 @@ runs:
   entrypoint: "/bin/sh"
   args:
     - "-c"
-    - "ls"
-    - "/usr/app"
+    - "ls /usr/app"
