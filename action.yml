@@ -12,5 +12,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://orenakto/akto-utils:latest'
-  args:
-    - ws
+  entrypoint: "entrypoint.sh"
