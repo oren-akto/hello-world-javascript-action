@@ -12,4 +12,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://orenakto/akto-utils:latest'
-  entrypoint: "/bin/sh ls"
+  entrypoint: "/bin/sh"
+  args:
+    - ls
