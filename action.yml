@@ -21,9 +21,8 @@ runs:
     - "/usr/app/build/apps/index.js"
     - "cli"
     - "extract"
-    - "--AKTO_SYNC=true"
     - "--PROJECT_DIR=/github/workspace"
-    - "--AKTO_DASHBOARD_URL=http://a8461c33bea9c479196f00b34509ebcf-9285dcb52d810f62.elb.ap-south-1.amazonaws.com:8080"
-    - "--AKTO_API_KEY=MrhwsiZSbSjeOBYjOQkyBdDAeEm7LfzXvCoexjOn"
+    - "--AKTO_SYNC=true"
+    - "--AKTO_DASHBOARD_URL=http://a0e069e6fbc6d423da7cfafc05a602fa-185d242a0b83f61f.elb.ap-south-1.amazonaws.com:8080"
+    - "--AKTO_API_KEY=a4Qvh4Tsxq1Ao6v73AhmXLqKyqw7ZmeBc4LfyLJK"
     - "--API_COLLECTION_NAME=juice_shop_demo"
-
