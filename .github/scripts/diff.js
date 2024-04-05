@@ -23,11 +23,10 @@ process.chdir(tmpDir);
 console.log(`Changed working directory to temporary location: ${tmpDir}`);
 
 if (GITHUB_EVENT_NAME === 'push') {
-    console.log(`Working directory is ${GITHUB_WORKSPACE}`);
 
     // Fetch only the last 2 commits for the branch specified by GITHUB_REF_NAME
     console.log(`Fetching the last 2 commits for branch ${GITHUB_REF_NAME}...`);
-    execSync(`git fetch --depth=2 origin ${GITHUB_REF_NAME}`, { stdio: 'inherit', cwd: GITHUB_WORKSPACE });
+    execSync(`git fetch --depth=2 origin ${GITHUB_REF_NAME}`, { stdio: 'inherit', cwd: tmpDir });
     
     // Determine the SHA of the previous commit
     const previousCommitSHA = execSync('git rev-parse HEAD~1', { encoding: 'utf-8', cwd: tmpDir }).trim();
