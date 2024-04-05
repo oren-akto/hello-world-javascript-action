@@ -35,6 +35,7 @@ if (GITHUB_EVENT_NAME === 'push') {
     console.log(`Checking out the previous commit: ${previousCommitSHA}`);
     execSync(`git checkout ${previousCommitSHA}`, { stdio: 'inherit', cwd: tmpDir });
 } else if (GITHUB_EVENT_NAME === 'pull_request') {
+    const GITHUB_BASE_REF = process.env.GITHUB_BASE_REF;
     // Fetch the latest commit of the base branch
     console.log(`Fetching the latest commit for base branch ${GITHUB_BASE_REF}...`);
     execSync(`git fetch origin ${GITHUB_BASE_REF} --depth=1`, { stdio: 'inherit' });
@@ -51,3 +52,6 @@ if (GITHUB_EVENT_NAME === 'push') {
     const baseCommitSHA = execSync('git rev-parse HEAD', { encoding: 'utf-8', cwd: tmpDir }).trim();
     console.log(`Base commit SHA: ${baseCommitSHA}`);
 }
+
+// 48469226ed62e1e43463ab5af4c90a98684d2500 - main
+// 70400a93012e988165b1b0cccb0d4717ecebdf1b - diff
