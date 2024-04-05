@@ -1,21 +1,23 @@
-on: [push]
+name: source code diff test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Akto code analysis demo
     steps:
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Akto code analysis
-        uses: ./ # Uses an action in the root directory
-        id: akto-code-analysis
-        with:
-          AKTO_DASHBOARD_URL: 'http://a0e069e6fbc6d423da7cfafc05a602fa-185d242a0b83f61f.elb.ap-south-1.amazonaws.com:8080'
-          AKTO_API_KEY: a4Qvh4Tsxq1Ao6v73AhmXLqKyqw7ZmeBc4LfyLJK
-          API_COLLECTION_NAME: juice_shop_demo
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: run source diff test
+        working-directory: ./.github/scripts
+        run: |
+          node ./diff.js
